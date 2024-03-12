@@ -4,9 +4,9 @@
 <div>
     <h1>Todo List</h1>
     {% for todo in todos %}
-        <a href="{% url 'todo_detail' todo.0 %}"><b>Title: {{ todo.1 }}</b></a>
-        <p>Status: {{ todo.2 }}</p>
-        <p>Deadline: {{ todo.3 }}</p>
+        <a href="{% url 'todo_detail'  todo.id %}"><b>Title: {{ todo.title }}</b></a>
+        <p>Status: {{ todo.status }}</p>
+        <p>Deadline: {{ todo.deadline }}</p>
     {% endfor %}
 </div>
 {% endblock %}

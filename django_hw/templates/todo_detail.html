@@ -6,5 +6,8 @@
     <p>{{ todo.description }}</p>
     <p>{{ todo.status }}</p>
     <p>{{ todo.deadline }}</p>
+    <a href="{% url 'todo_list' %}">Back</a>
+    <a href="{% url 'update_todo' todo.id %}">Edit</a>
+    <a href="{% url 'delete_todo' todo.id %}">Delete</a>
 </div>
 {% endblock %}
